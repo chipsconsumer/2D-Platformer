@@ -36,7 +36,15 @@ public class PlayerMotor : MonoBehaviour
                 rb.AddForce(new Vector2(-rb.linearVelocityX * stoppingForce, 0));
             }
         }
-
+        //Limit max speed
+        if (rb.linearVelocityX >= maxSpeedX)
+        {
+            rb.linearVelocityX = maxSpeedX;
+        }
+        else if (rb.linearVelocityX <= -maxSpeedX)
+        {
+            rb.linearVelocityX = -maxSpeedX;
+        }
     }
 
     private void OnMove(InputValue value)
