@@ -1,8 +1,10 @@
 using UnityEngine;
 
-public class spike : MonoBehaviour
+public class HealthPack : MonoBehaviour
 {
-    public float damage = 1;
+    public float health = 1; 
+
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -14,13 +16,10 @@ public class spike : MonoBehaviour
     {
         
     }
-
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        //Destroy(collision.gameObject);
-        
-        collision.GetComponent<playerhealth>().AddDamage(damage);
-        
+        collision.GetComponent<playerhealth>().AddHealth(health);
+        Destroy(gameObject);
+
     }
 }
-

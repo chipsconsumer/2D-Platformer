@@ -10,7 +10,8 @@ public class PlayerMotor : MonoBehaviour
     public float jumpforce = 5;
     public float maxspeed = 10;
     public float stoppingForce = 10;
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    
+       
     private void Start()
     {
 rigidbody2D = GetComponent<Rigidbody2D>();
