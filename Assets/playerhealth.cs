@@ -10,8 +10,12 @@ public class playerhealth : MonoBehaviour
     public float invincibilityTimer = 2;
 
 
+
     public delegate void HealthChangeHandler(float newhealth, float amountChanged);
     public event HealthChangeHandler OnHealChanged;
+
+    public delegate void HealthInitHandler (float newHealth);
+    public event HealthInitHandler OnHealthInitialised;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
