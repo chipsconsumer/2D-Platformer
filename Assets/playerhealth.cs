@@ -20,6 +20,7 @@ public class playerhealth : MonoBehaviour
     void Start()
     {
         health = maxHealth;
+        OnHealthInitialised?.Invoke(health);
     }
 
     // Update is called once per frame
