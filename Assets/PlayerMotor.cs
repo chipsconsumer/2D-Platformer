@@ -10,7 +10,9 @@ public class PlayerMotor : MonoBehaviour
     public float jumpforce = 5;
     public float maxspeed = 10;
     public float stoppingForce = 10;
-    
+
+    private int _jumpCount = 0;
+    public int maxJumpCount = 2;
        
     private void Start()
     {
@@ -64,12 +66,23 @@ rigidbody2D = GetComponent<Rigidbody2D>();
         
            
             rigidbody2D.AddForce(Vector2.up * jumpforce, ForceMode2D.Impulse);
-            canJump = false;
+            _jumpCount++;
+            if (_jumpCount >= maxJumpCount)
+            {
+                canJump = false;
+            }
+            
+           
         }
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
+
     {
         canJump = true;
+        _jumpCount = 0;
     }
+
 }
+
+ 
