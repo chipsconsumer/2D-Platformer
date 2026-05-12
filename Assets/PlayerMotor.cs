@@ -91,6 +91,7 @@ rigidbody2D = GetComponent<Rigidbody2D>();
         _jumpCount = 0;
     }
 
+    // DASHiNG
     private void OnDash()
     {
         if (canDash && direction.x != 0)
