@@ -1016,6 +1016,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5281612144183493969, guid: 2a4559f80ab670445b4c7eb89d9a78f4, type: 3}
+      propertyPath: destination
+      value: 
+      objectReference: {fileID: 1223036697}
     - target: {fileID: 5398257687675286017, guid: 2a4559f80ab670445b4c7eb89d9a78f4, type: 3}
       propertyPath: m_LocalPosition.x
       value: -37.324448
@@ -4308,6 +4312,7 @@ MonoBehaviour:
   jumpforce: 10
   maxspeed: 10
   stoppingForce: 10
+  dashForce: 20
   maxJumpCount: 2
 --- !u!114 &1048695803
 MonoBehaviour:

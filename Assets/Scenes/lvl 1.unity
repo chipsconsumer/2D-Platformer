@@ -2222,7 +2222,7 @@ MonoBehaviour:
   jumpforce: 7
   maxspeed: 10
   stoppingForce: 10
-  dashForce: 80
+  dashForce: 20
   maxJumpCount: 2
 --- !u!114 &1048695803
 MonoBehaviour:
