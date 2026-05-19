@@ -26,6 +26,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Welcome Screen.unity
     guid: b4d1b045c84cee340be13e2b4c64a841
+  - enabled: 1
+    path: Assets/Scenes/win screen.unity
+    guid: 26a6d47b4f6ffbd499533910053355c8
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0
