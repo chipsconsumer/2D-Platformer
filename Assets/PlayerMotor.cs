@@ -12,15 +12,19 @@ public class PlayerMotor : MonoBehaviour
     public float maxspeed = 10;
     public float stoppingForce = 10;
     public float dashForce = 20;
+    private float initXScale;
 
     private bool canDash = true;
     private bool isDashing = false;
     private int _jumpCount = 0;
     public int maxJumpCount = 2;
+    private  Animator _animator;
        
     private void Start()
     {
 rigidbody2D = GetComponent<Rigidbody2D>();
+        _animator = GetComponent<Animator>();
+        initXScale = transform.localScale.x;
     }
     // Update is called once per frame
     private void FixedUpdate()
@@ -30,6 +34,21 @@ rigidbody2D = GetComponent<Rigidbody2D>();
             PlayerMovement();
             HandleMaxSpeed();
             PlayerStopping();
+
+            if (direction.x != 0)
+            {
+                _animator.SetBool("is moving", true);
+            }
+            else { _animator.SetBool("is moving", false); }
+            if (direction.x > 0)
+            {
+                transform.localScale = new Vector3(initXScale, transform.localScale.y, transform.localScale.z);
+
+            }
+            else if (direction.x < 0)
+            {
+                transform.localScale = new Vector3(-initXScale, transform.localScale.y, transform.localScale.z);
+            }
         }
         
 
@@ -113,6 +132,7 @@ rigidbody2D = GetComponent<Rigidbody2D>();
         yield return new WaitForSeconds(1f);
         canDash = true;
     }
+
 }
 
 

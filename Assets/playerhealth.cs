@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class playerhealth : MonoBehaviour
 {
@@ -39,6 +40,10 @@ public class playerhealth : MonoBehaviour
             canReceiveDamage = false;
             StartCoroutine(InvincibilityTimer(invincibilityTimer, ResetInvincibility));
             
+        }
+        if(health <= 0)
+        {
+            SceneManager.LoadScene("game fail");
         }
         Debug.Log(health);
     }
