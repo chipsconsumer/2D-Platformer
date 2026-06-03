@@ -591,7 +591,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b25d0e348e6eacf468a8fabd6666fe63, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneName: lvl 1
+  sceneName: Welcome Screen
 --- !u!114 &1854435405
 MonoBehaviour:
   m_ObjectHideFlags: 0

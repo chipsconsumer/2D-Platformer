@@ -669,7 +669,7 @@ PrefabInstance:
       objectReference: {fileID: 345157632}
     - target: {fileID: 2241560579953250320, guid: 70dda888900f6a44192c72cd02297ac5, type: 3}
       propertyPath: speed
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 6436967048244397932, guid: 70dda888900f6a44192c72cd02297ac5, type: 3}
       propertyPath: m_LocalPosition.x
